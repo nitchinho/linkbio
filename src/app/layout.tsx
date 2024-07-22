@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Minha LinkBio",
-  description: "Gerado por Nitchinho",
+  title: "LinkBio - Rodrigo Almeida",
+  description: "Gerado por Nitcho",
 };
 
 export default function RootLayout({
@@ -16,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <body className="bg-gradient-to-r from-slate-500 to-slate-800">{children}</body>
     </html>
   );
 }

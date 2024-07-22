@@ -12,13 +12,11 @@ import {
   PopoverGroup,
   PopoverPanel,
 } from '@headlessui/react'
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
+
+import {  
+  Bars3Icon,  
   CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
+  FingerPrintIcon,  
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 
@@ -26,14 +24,13 @@ import { ChevronDownIcon, CursorArrowRippleIcon, PhoneIcon, PlayCircleIcon } fro
 
 
 const products = [
-  { name: 'Linkedin', description: 'Minha rede profissional com detalhes', href: 'http://linkedin.com/in/nitchinho', icon: CursorArrowRippleIcon },
-  { name: 'GitHub', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Instagram', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Facebook', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },  
+  { name: 'Linkedin', description: 'Minha rede profissional em detalhes', href: 'http://linkedin.com/in/nitchinho', icon: CursorArrowRippleIcon },
+  { name: 'GitHub', description: 'Meus repositórios públicos', href: 'https://github.com/nitchinho', icon: CursorArrowRaysIcon },
+  { name: 'Instagram', description: 'Minha rede social pessoal', href: 'https://www.instagram.com/nitchinho', icon: FingerPrintIcon }  
 ]
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  { name: 'Meu E-mail', href: 'mailto:rodrigosalmeida1984@gmail.com', icon: PlayCircleIcon },
+  { name: 'Meu Telefone', href: 'https://wa.me/5511964290237', icon: PhoneIcon },
 ]
 
 export default function Header() {
@@ -43,8 +40,8 @@ export default function Header() {
     <header className="bg-white">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+          <a href="/" className="-m-1.5 p-1.5">
+            <span className="sr-only">Nitchinho</span>
             <img alt="" className="h-8 w-auto" src='logo.jpg'/>
           </a>
         </div>
@@ -54,7 +51,7 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(true)}
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           >
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only">Abrir Menu</span>
             <Bars3Icon aria-hidden="true" className="h-6 w-6" />
           </button>
         </div>
@@ -104,39 +101,23 @@ export default function Header() {
           </Popover>
 
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Features
+            Minha Bio
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Marketplace
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Company
-          </a>
-        </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
+            Meus Projetos
+          </a>          
+        </PopoverGroup>        
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                alt=""
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
-              />
-            </a>
+          <div className="flex items-center justify-between">            
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
             >
-              <span className="sr-only">Close menu</span>
+              <span className="sr-only">Fechar Menu</span>
               <XMarkIcon aria-hidden="true" className="h-6 w-6" />
             </button>
           </div>
@@ -179,15 +160,7 @@ export default function Header() {
                 >
                   Company
                 </a>
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
-              </div>
+              </div>              
             </div>
           </div>
         </DialogPanel>

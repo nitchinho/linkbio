@@ -8,13 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.6.0",
-    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+  "dependencies": {    
     "@headlessui/react": "^2.1.2",
-    "@headlessui/vue": "^1.7.22",
     "@heroicons/react": "^2.1.5",
-    "@heroicons/vue": "^2.1.5",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
