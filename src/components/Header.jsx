@@ -13,10 +13,10 @@ import {
   PopoverPanel,
 } from '@headlessui/react'
 
-import {  
-  Bars3Icon,  
+import {
+  Bars3Icon,
   CursorArrowRaysIcon,
-  FingerPrintIcon,  
+  FingerPrintIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 
@@ -26,7 +26,7 @@ import { ChevronDownIcon, CursorArrowRippleIcon, PhoneIcon, PlayCircleIcon } fro
 const products = [
   { name: 'Linkedin', description: 'Minha rede profissional em detalhes', href: 'http://linkedin.com/in/nitchinho', icon: CursorArrowRippleIcon },
   { name: 'GitHub', description: 'Meus repositórios públicos', href: 'https://github.com/nitchinho', icon: CursorArrowRaysIcon },
-  { name: 'Instagram', description: 'Minha rede social pessoal', href: 'https://www.instagram.com/nitchinho', icon: FingerPrintIcon }  
+  { name: 'Instagram', description: 'Minha rede social pessoal', href: 'https://www.instagram.com/nitchinho', icon: FingerPrintIcon }
 ]
 const callsToAction = [
   { name: 'Meu E-mail', href: 'mailto:rodrigosalmeida1984@gmail.com', icon: PlayCircleIcon },
@@ -42,7 +42,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Nitchinho</span>
-            <img alt="" className="h-8 w-auto" src='logo.jpg'/>
+            <img alt="" className="h-8 w-auto" src='logo.jpg' />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -105,13 +105,13 @@ export default function Header() {
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Meus Projetos
-          </a>          
-        </PopoverGroup>        
+          </a>
+        </PopoverGroup>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">            
+          <div className="flex items-center justify-between">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -146,21 +146,15 @@ export default function Header() {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Features
+                  Minha Bio
                 </a>
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </a>
-              </div>              
+                  Meus Projetos
+                </a>                
+              </div>
             </div>
           </div>
         </DialogPanel>
